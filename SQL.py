@@ -48,7 +48,6 @@ def load(path, table_name):
         con = engine.connect()
         df.to_sql(name = table_name, con=con, if_exists = 'replace')
         con.close()
-
     except Error as e:
         print("Error while connecting to MySQL", e)
 
