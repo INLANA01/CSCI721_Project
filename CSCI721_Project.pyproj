@@ -70,7 +70,7 @@
     <Content Include="Installation and Usage Document.pdf" />
     <Content Include="Mapping.xlsx" />
     <Content Include="MergedDataSet.csv" />
-    <Content Include="SQL_Queries_to_make_2_databases_uniform.sql" />
+    <Content Include="Queries.sql" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
