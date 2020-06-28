@@ -125,7 +125,7 @@ def main():
 
     #Discard columns with unique values 
     del result['playerID']
-    result.to_csv(r'C:\Users\adity\source\repos\CSCI721_Project\data\baseballdatabank-master\baseballdatabank-master\MergedDataSet\MergedDataSet.csv')
+    result.to_csv(r'path\MergedDataSet.csv')
 
 if __name__ == '__main__':
     main()
