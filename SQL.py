@@ -86,20 +86,18 @@ def GetDataset(query):
       cnx.close()
 
 query1 = ''' Select playerID, playerName, Season, teamID, League, G, AB, R, H, 2B, 3B, HR, RBI, SB, BB, SO, IBB, HBP, SH, SF, salary from ChadDatasetTable
-        GROUP BY playerName, Season
-        having
+        where
         R != 0
         and G > 10
         and SF != 0
-        and season >= 2000
+        and season >= 1900
         order by season desc; '''
 query2 = '''Select playerID, `Player Name` as playerName,  Season, teamID, League, G, AB, R, H, 2B, 3B, HR, RBI, SB, BB, SO, IBB, HBP, SH, SF, salary from mlb_batting
-        GROUP BY playerName, Season
-        having
+        where
         R != 0
         and G > 10
         and SF != 0
-        and season >= 2000 
+        and season >= 1900 
         order by season desc;'''
 
 def main():
@@ -121,11 +119,11 @@ def main():
     #Remove inconsistencies in teamID
     mapping = {"CHA":"CHW","CHN":"CHC","FLO":"FLA","KCA":"KCR","LAN":"LAD","MIL":"MLU","NYA":"NYY","NYN":"NYM","SDN":"SDP","SFN":"SFG","SLN":"STL","TBA":"TBD","WAS":"WNA","BFL":"BFB","IHO":"IND","KCC":"KCN","PHA":"PHQ","SYR":"SYS","WNL":"WNA","WNL":"WNA"}    
     for key, values in mapping.items():
-        result['teamID'] = np.where(result['teamID'] == key, values, result['teamID'])
+        result['TeamID'] = np.where(result['TeamID'] == key, values, result['TeamID'])
 
     #Discard columns with unique values 
     del result['playerID']
-    result.to_csv(r'path\MergedDataSet.csv')
+    result.to_csv(r'C:\Users\adity\source\repos\CSCI721_Project\MergedDataSet.csv')
 
 if __name__ == '__main__':
     main()
