@@ -1,4 +1,3 @@
-# Select p.playerID, nameFirst, nameLast, yearID, teamID, lgID, G, AB, R, H, 2B, 3B, HR, RBI, SB, BB, SO, IBB, HBP, SH, SF, salary
 
 use csci721_project;
 
