@@ -67,6 +67,9 @@
     <Content Include="data\IMPORTABLE_leagues_MLB_2011-value-batting_players_value_batting.tab" />
     <Content Include="data\MLBStats.csv" />
     <Content Include="config.ini" />
+    <Content Include="Installation and Usage Document.pdf" />
+    <Content Include="Mapping.xlsx" />
+    <Content Include="MergedDataSet.csv" />
     <Content Include="SQL_Queries_to_make_2_databases_uniform.sql" />
   </ItemGroup>
   <ItemGroup>
