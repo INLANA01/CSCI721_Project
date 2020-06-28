@@ -90,14 +90,14 @@ query1 = ''' Select playerID, playerName, Season, teamID, League, G, AB, R, H, 2
         R != 0
         and G > 10
         and SF != 0
-        and season >= 1900
+        and season >= 1990
         order by season desc; '''
 query2 = '''Select playerID, `Player Name` as playerName,  Season, teamID, League, G, AB, R, H, 2B, 3B, HR, RBI, SB, BB, SO, IBB, HBP, SH, SF, salary from mlb_batting
         where
         R != 0
         and G > 10
         and SF != 0
-        and season >= 1900 
+        and season >= 1990 
         order by season desc;'''
 
 def main():
